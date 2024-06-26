@@ -1,0 +1,52 @@
+@media only screen and (min-width: 360px) {
+  .container,
+  .bg-zuck,
+  .bg-purple-hover {
+    height: 100%;
+  }
+
+  .message {
+    width: 80% !important;
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .container,
+  .bg-zuck,
+  .bg-purple-hover {
+    height: 100%;
+  }
+
+  .message {
+    padding: 5%;
+    width: 80% !important;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 400px) {
+  .container,
+  .bg-zuck,
+  .bg-purple-hover {
+    height: 100vh;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .message {
+    width: 80% !important;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .message {
+    width: 50% !important;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .message {
+    width: 50% !important;
+  }
+}

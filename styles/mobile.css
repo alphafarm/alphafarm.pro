@@ -1,0 +1,449 @@
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait */
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .container {
+    width: 100%;
+  }
+
+  .logo {
+    width: 40%;
+    height: 40%;
+  }
+
+  .header-title,
+  .header-subtitle,
+  .header-cards-title {
+    font-size: 25px;
+  }
+
+  .btn {
+    border-radius: 25px;
+    padding: 4%;
+    width: 50% !important;
+  }
+
+  .margin-10 {
+    margin: 10% 0;
+  }
+
+  .btn-leaky {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .padding-bottom-20 {
+    padding-bottom: 60%;
+  }
+
+  .title-box {
+    width: 100%;
+    margin: 10% 0 !important;
+    padding: 15% 0;
+  }
+
+  .title {
+    font-size: 65px;
+  }
+
+  .subtitle {
+    font-size: 25px;
+  }
+
+  .card {
+    margin-top: 5%;
+    width: 80% !important;
+    padding: 2% !important;
+  }
+
+  .card > h1 {
+    font-size: 30px;
+  }
+
+  .card > p {
+    font-size: 20px;
+  }
+
+  .whatsapp-button {
+    padding: 1.5%;
+    top: 92%;
+    left: 88%;
+    opacity: 1;
+    padding: 2%;
+  }
+  .whatsapp-logo {
+    color: #ffffff;
+    font-size: 25px;
+  }
+
+  .section-offer {
+    border-radius: 120px 120px 0 0;
+    margin-top: -50%;
+    padding-bottom: 60%;
+  }
+
+  .section-offer > p {
+    font-size: 25px;
+  }
+
+  .card-offer,
+  .card-offer-yellow {
+    width: 90% !important;
+    height: 100% !important;
+  }
+
+  .card-offer > h5,
+  .card-offer-yellow > h5 {
+    font-size: 18px;
+  }
+
+  .offer-tag {
+    top: -10px !important;
+    left: 34%;
+    font-size: 22px;
+  }
+
+  .offer-title {
+    font-size: 40px;
+  }
+
+  .list-offer {
+    font-size: 20px;
+  }
+
+  .offer-anchor > h4,
+  .offer-anchor > h3 {
+    font-size: 25px;
+  }
+
+  .offer-currency {
+    font-size: 25px;
+  }
+
+  .offer-price {
+    font-size: 85px;
+  }
+
+  .offer-button > a {
+    font-size: 20px;
+  }
+
+  .payment-info {
+    font-size: 16px;
+  }
+
+  .payment-info > h1 {
+    padding-bottom: 5%;
+  }
+
+  .payment-method-logo {
+    background-color: #ffffff;
+    border-radius: 25px;
+    margin-bottom: 0;
+    padding: 1%;
+    width: 100%;
+  }
+
+  .depoiments-area {
+    font-size: 20px;
+  }
+
+  .depoiments {
+    display: flex !important;
+  }
+
+  .depoiment-card {
+    display: flex;
+    padding: 5%;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .depoiment-image > img {
+    border-radius: 18px;
+  }
+
+  .depoiment-name {
+    font-size: 50px;
+  }
+
+  .depoiment-person-info {
+    font-size: 22px;
+  }
+
+  .depoiment-data {
+    font-size: 20px;
+  }
+
+  .depoiment-audio > audio {
+    width: 90%;
+  }
+
+  .depoiment-audio-title {
+    font-size: 25px;
+  }
+
+  .bg-logo {
+    background-size: 100%;
+  }
+
+  .faq-area-title {
+    font-size: 22px;
+  }
+
+  .width-60 {
+    width: 100%;
+  }
+
+  .faq-accordion-box-title {
+    font-size: 20px;
+  }
+
+  .faq-accordion-box > p {
+    font-size: 18px;
+  }
+
+  .footer {
+    border-radius: 120px 120px 0 0;
+    margin-top: -50%;
+  }
+
+  .footer-logo {
+    padding-top: 5%;
+    width: 25%;
+    height: 25%;
+  }
+
+  .footer > div > p {
+    font-size: 15px;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 360px) {
+  .logo {
+    width: 40%;
+    height: 40%;
+  }
+
+  .btn-leaky {
+    padding: 2.5%;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+
+  .padding-bottom-20 {
+    padding-bottom: 60%;
+  }
+
+  .section-offer {
+    border-radius: 150px 150px 0 0;
+    margin-top: -50%;
+  }
+
+  .title-box {
+    margin-top: 30%;
+    margin-bottom: 15%;
+  }
+
+  .title {
+    font-size: 80px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+  }
+
+  .header-cards-title {
+    font-size: 22px;
+    padding-bottom: 5%;
+  }
+
+  .card {
+    padding: 5%;
+  }
+
+  .card > p {
+    font-size: 20px;
+  }
+
+  .whatsapp-button {
+    padding: 1.5%;
+    top: 92%;
+    left: 85%;
+    opacity: 1;
+    padding: 2%;
+  }
+  .whatsapp-logo {
+    color: #ffffff;
+    font-size: 25px;
+  }
+
+  .section-offer {
+    padding-bottom: 60%;
+  }
+
+  .section-offer > p {
+    font-size: 20px;
+    padding-bottom: 10%;
+  }
+
+  .card-offer,
+  .card-offer-yellow {
+    width: 90% !important;
+    height: 100% !important;
+  }
+
+  .offer-title {
+    font-size: 40px;
+  }
+
+  .list-offer {
+    font-size: 18px;
+  }
+
+  .card-offer,
+  .card-offer-yellow {
+    height: 100%;
+  }
+
+  .card-offer-yellow {
+    padding: 5%;
+  }
+
+  .offer-tag {
+    top: -4%;
+    left: 38%;
+  }
+
+  .width-60 {
+    width: 80%;
+  }
+
+  .faq-area-title {
+    font-size: 20px;
+  }
+
+  .faq-accordion-box {
+    padding: 2%;
+  }
+
+  .faq-accordion-box-title {
+    font-size: 20px;
+  }
+
+  .faq-accordion-box > p {
+    font-size: 15px;
+  }
+
+  .footer {
+    border-radius: 150px 150px 0 0;
+    margin-top: -50%;
+  }
+
+  .footer-logo {
+    padding-top: 10%;
+    width: 25%;
+    height: 25%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .btn-section {
+    margin-top: 5%;
+    margin-bottom: 10%;
+  }
+
+  .btn-leaky {
+    font-size: 18px;
+    padding: 1%;
+    font-weight: bold;
+  }
+
+  .title-box {
+    margin: 5%;
+  }
+
+  .header-cards-title {
+    margin: 2%;
+  }
+
+  .card {
+    width: 25%;
+  }
+
+  .padding-bottom-20 {
+    padding-bottom: 60%;
+  }
+
+  .section-offer {
+    margin-top: -50%;
+    padding-bottom: 60%;
+  }
+
+  .section-offer > p {
+    font-size: 20px;
+  }
+
+  /*.card-offer {
+    padding: 2% !important;
+    height: 450px;
+  }
+
+  .card-offer-yellow {
+    height: 480px;
+  } */
+
+  .card-offer,
+  .card-offer-yellow {
+    width: 25% !important;
+    height: 100% !important;
+    padding: 2% !important;
+  }
+
+  .offer-tag {
+    top: -30px !important;
+    left: 38%;
+  }
+
+  .depoiments {
+    display: flex !important;
+  }
+
+  .depoiment-card {
+    width: 40%;
+  }
+
+  .bg-logo {
+    background-size: 35%;
+  }
+
+  .footer {
+    margin-top: -50%;
+  }
+
+  .footer-logo {
+    width: 15%;
+    height: 15%;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up)
+@media only screen and (min-width: 600px) {
+  ...;
+}
+/* Medium devices (landscape tablets, 768px and up) 
+@media only screen and (min-width: 768px) {
+  ...;
+}
+/* Large devices (laptops/desktops, 992px and up) 
+@media only screen and (min-width: 992px) {
+  ...;
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) 
+@media only screen and (min-width: 1200px) {
+  ...;
+} */

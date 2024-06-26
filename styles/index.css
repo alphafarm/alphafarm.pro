@@ -1,0 +1,372 @@
+.bg-lines {
+  background-image: url("./../images/background/lines.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-wolf {
+  background-image: url("./../images/background/wolf.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-logo {
+  background-image: url("./../images/logos/Mascote_Negativo.svg");
+  background-position: 0%;
+  background-repeat: no-repeat;
+  background-size: 30%;
+}
+
+.bg-purple {
+  background-image: linear-gradient(to right, #150948, #050217);
+}
+
+.bg-white-purple {
+  background-color: #3c0562;
+}
+
+.bg-dark-purple {
+  background-color: #0b0529;
+}
+
+.bg-yellow {
+  background-color: #ffc400;
+}
+
+.bg-red{
+  background-color: #ff0000;
+}
+
+.bg-black {
+  background-color: #050217;
+}
+
+.bg-purple-hover {
+  background-image: linear-gradient(
+    to right,
+    rgba(21, 9, 72, 0.75),
+    rgba(5, 2, 23, 0.75)
+  ); /* #150948 to #050217*/
+  backface-visibility: 75%;
+}
+
+.text-color-purple {
+  color: #b733d6;
+}
+
+.text-color-pink {
+  color: #e207af;
+}
+
+.text-color-gold {
+  color: #ffc400;
+}
+
+.btn-offer{
+  padding: 2%;
+}
+
+.btn-leaky {
+  border: 2px solid #b733d6;
+  color: #ffffff;
+}
+
+.btn-purple {
+  background-color: #b733d6;
+  font-weight: bold;
+  padding: 2% 5%;
+  color: #ffffff;
+}
+
+.btn-pink {
+  background-color: #e207af;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.btn-white-pink {
+  background-color: #ffffff;
+  font-weight: bold;
+  color: #e207af;
+}
+
+.logo {
+  width: 15%;
+  height: 15%;
+}
+
+.title-box {
+  margin: 4% 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.front,
+.back {
+  position: absolute;
+}
+
+.front {
+  z-index: 1;
+}
+
+.back {
+  z-index: 0;
+}
+
+.back > h1 {
+  opacity: 0.35;
+}
+
+.title {
+  font-size: 75px;
+}
+
+.subtitle {
+  font-size: 25px;
+}
+
+.card {
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  margin: 2%;
+  padding: 1%;
+}
+
+.shadow {
+  box-shadow: 0 0 50px rgba(148, 5, 196, 0.16);
+}
+
+.whatsapp {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.whatsapp-button {
+  background-color: #25d366;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  padding: 1.5%;
+  opacity: 0.1;
+  transition: 0.3s ease;
+  top: 80%;
+  left: 90%;
+  z-index: 2;
+}
+
+.whatsapp-button:hover {
+  opacity: 1;
+}
+
+.whatsapp-logo {
+  color: #ffffff;
+  font-size: 50px;
+}
+
+.section-offer {
+  border-radius: 250px 250px 0 0;
+  position: relative;
+  padding-bottom: 18%;
+  margin-top: -18%;
+  z-index: 1;
+}
+
+.card-offer,
+.card-offer-yellow,
+.card-offer-disabled {
+  align-self: center;
+  height: 100%;
+  background-image: linear-gradient(to bottom, #270771, #3e0450);
+  border-radius: 25px;
+}
+
+.card-offer-yellow {
+  border: 5px solid #ffc400;
+}
+
+.card-offer-disabled {
+  border: 5px solid #000000;
+}
+
+.offer-title {
+  font-size: 35px;
+}
+
+.list-offer {
+  --icon-space: 1.3em;
+  list-style: none;
+  padding: 0;
+  text-align: start;
+  margin: 8% 0;
+}
+
+.list-offer > li {
+  padding-left: var(--icon-space);
+  margin: 4% 0;
+}
+
+.list-offer > li:before {
+  content: "\f058";
+  color: #e207af; /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: calc(var(--icon-space) * -1);
+  width: var(--icon-space);
+}
+
+.offer-price-handler {
+  font-weight: bold;
+  display: inline-flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+.offer-price {
+  font-size: 70px;
+}
+
+.offer-currency {
+  font-size: 20px;
+}
+
+.offer-anchor > h4 {
+  font-size: 15px;
+}
+
+.offer-anchor > h3 {
+  font-size: 20px;
+}
+
+.offer-button {
+  margin: 15% 0;
+}
+
+.offer-tag {
+  width: 70%;
+  position: relative;
+  top: -6%;
+  left: 42%;
+  border-radius: 14px 30px 0 14px;
+}
+
+.offer-tag-disabled {
+  width: 100%;
+  border-radius: 25px 25px 5px 5px;
+  margin-bottom: 2%;
+}
+
+.payment-info > h1 {
+  padding-bottom: 2%;
+}
+
+.payment-method-logo {
+  background-color: #ffffff;
+  border-radius: 25px;
+  padding: 1%;
+  width: 30%;
+  margin-bottom: 5%;
+}
+
+.depoiment-card {
+  align-items: center;
+  border-radius: 25px;
+  margin: 2%;
+  padding: 1%;
+  height: 100%;
+}
+
+.depoiment-image > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+}
+
+.depoiment-name {
+  font-size: 45px;
+}
+
+.depoiment-person-info,
+.depoiment-audio-title {
+  font-size: 20px;
+}
+
+.depoiment-data {
+  font-size: 15px;
+}
+
+.depoiment-person-info > a {
+  text-decoration: none;
+}
+
+.faq-accordion-box {
+  padding: 1%;
+  border-radius: 25px;
+  box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.15);
+  transition: 0.3s ease;
+}
+
+.faq-accordion-box > summary {
+  cursor: pointer;
+}
+
+.faq-accordion-box-title {
+  margin-left: 1.5rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.faq-accordion-box p {
+  margin-left: 1.75rem;
+  color: #fff;
+}
+
+.footer {
+  border-radius: 250px 250px 0 0;
+  position: relative;
+  margin-top: -18%;
+  z-index: 1;
+}
+
+.footer-logo {
+  width: 8%;
+  height: 8%;
+}
+
+/* === NEW CARDS === */
+.offer-holder{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.no-link{
+  text-decoration: none;
+}
+
+.offer-new-button{
+  border-radius: 25px;
+  font-size: large;
+  font-weight: bold;
+  margin: 2.5%;
+  padding: 5%;
+  text-transform: uppercase;
+  width: 80%;
+}
+
+.offer-button-purple{
+  background-color: #b733d6;
+}
+
+.offer-button-white{
+  background-color: #ffffff;
+}
+
+.offer-button-leaky{
+  border: 1px solid #ffffff;
+}
