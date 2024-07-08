@@ -19,7 +19,7 @@ var products = [
                 originalPrice: 197,
                 price: 147,
                 paymentLink: [
-                    "https://go.perfectpay.com.br/PPU38COIAIH?hidecard=1",
+                    "https://pay.cakto.com.br/6VcYgfM",
                     "https://api.whatsapp.com/send?phone=5547991243979&text=Ol%C3%A1%20equipe%20Alpha%20Farm,%20quero%20o%20link%20de%20pagamento%20no%20cart%C3%A3o%20para%20o%20Perfil%20Restabelecido!"
                 ],
                 isMostSell: false,
@@ -41,7 +41,7 @@ var products = [
                 originalPrice: 157,
                 price: 120,
                 paymentLink: [
-                    "https://go.perfectpay.com.br/PPU38COIAKL?hidecard=1",
+                    "https://pay.cakto.com.br/82Hi3aT",
                     "https://api.whatsapp.com/send?phone=5547991243979&text=Ol%C3%A1%20equipe%20Alpha%20Farm,%20quero%20o%20link%20de%20pagamento%20no%20cart%C3%A3o%20para%20o%20Perfil%20Confirmado!"
                 ],
                 isMostSell: true,
@@ -61,7 +61,7 @@ var products = [
                 originalPrice: 120,
                 price: 80,
                 paymentLink: [
-                    "https://go.perfectpay.com.br/PPU38COIAKO?hidecard=1",
+                    "https://pay.cakto.com.br/5U22mjJ",
                     "https://api.whatsapp.com/send?phone=5547991243979&text=Ol%C3%A1%20equipe%20Alpha%20Farm,%20quero%20o%20link%20de%20pagamento%20no%20cart%C3%A3o%20para%20o%20Perfil%20Simples!"
                 ],
                 isMostSell: false,
@@ -84,7 +84,7 @@ var products = [
                 originalPrice: 800,
                 price: 657,
                 paymentLink: [
-                    "https://go.perfectpay.com.br/PPU38CNGL6Q?hidecard=1",
+                    "https://pay.cakto.com.br/C8P3rHS",
                     "https://api.whatsapp.com/send?phone=5547991243979&text=Ol%C3%A1%20equipe%20Alpha%20Farm,%20quero%20o%20link%20de%20pagamento%20no%20cart%C3%A3o%20para%20a%20BM%20ILIMITADA!"
                 ],
                 isMostSell: false,
@@ -100,7 +100,7 @@ var products = [
                 originalPrice: 450,
                 price: 297,
                 paymentLink: [
-                    "https://go.perfectpay.com.br/PPU38CNGL7B?hidecard=1",
+                    "https://pay.cakto.com.br/Cx9cmBg",
                     "https://api.whatsapp.com/send?phone=5547991243979&text=Ol%C3%A1%20equipe%20Alpha%20Farm,%20quero%20o%20link%20de%20pagamento%20no%20cart%C3%A3o%20para%20a%20BM%201.3k!"
                 ],
                 isMostSell: true,
@@ -115,7 +115,7 @@ var products = [
                 originalPrice: 100,
                 price: 80,
                 paymentLink: [
-                    "https://go.perfectpay.com.br/PPU38CNGL7C?hidecard=1",
+                    "https://pay.cakto.com.br/At9Kk3h",
                     "https://api.whatsapp.com/send?phone=5547991243979&text=Ol%C3%A1%20equipe%20Alpha%20Farm,%20quero%20o%20link%20de%20pagamento%20no%20cart%C3%A3o%20para%20a%20BM%20257 diários!"    
                 ],
                 isMostSell: false,
@@ -137,7 +137,7 @@ var products = [
                 originalPrice: 874,
                 price: 757,
                 paymentLink: [
-                    "https://go.perfectpay.com.br/PPU38CNGLCL?hidecard=1",
+                    "https://pay.cakto.com.br/5GLvWdn",
                     "https://api.whatsapp.com/send?phone=5547991243979&text=Ol%C3%A1%20equipe%20Alpha%20Farm,%20quero%20o%20link%20de%20pagamento%20no%20cart%C3%A3o%20para%20o%20COMBO%20ALPHA!"    
                 ],
                 isMostSell: false,
@@ -153,7 +153,7 @@ var products = [
                 originalPrice: 477,
                 price: 357,
                 paymentLink: [
-                    "https://go.perfectpay.com.br/PPU38CNGLD6?hidecard=1",
+                    "https://pay.cakto.com.br/4k65d34",
                     "https://api.whatsapp.com/send?phone=5547991243979&text=Ol%C3%A1%20equipe%20Alpha%20Farm,%20quero%20o%20link%20de%20pagamento%20no%20cart%C3%A3o%20para%20o%20COMBO%20MATILHA!"    
                 ],
                 isMostSell: true,
@@ -169,7 +169,7 @@ var products = [
                 originalPrice: 160,
                 price: 147,
                 paymentLink: [
-                    "https://go.perfectpay.com.br/PPU38CNGLDG?hidecard=1",
+                    "https://pay.cakto.com.br/8d2pgJk",
                     "https://api.whatsapp.com/send?phone=5547991243979&text=Ol%C3%A1%20equipe%20Alpha%20Farm,%20quero%20o%20link%20de%20pagamento%20no%20cart%C3%A3o%20para%20o%20Combo%20Lobinho!"    
                 ],
                 isMostSell: false,
