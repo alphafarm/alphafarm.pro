@@ -97,8 +97,8 @@ var products = [
                     "Sobe conversão em 24 Hrs",
                     "Produto 100% Nacional"
                 ],
-                originalPrice: 587,
-                price: 557,
+                originalPrice: 557,
+                price: 357,
                 paymentLink: [
                     "https://pay.cakto.com.br/Cx9cmBg",
                     "https://api.whatsapp.com/send?phone=5547991243979&text=Ol%C3%A1%20equipe%20Alpha%20Farm,%20quero%20o%20link%20de%20pagamento%20no%20cart%C3%A3o%20para%20a%20BM%201.3k!"
@@ -150,8 +150,8 @@ var products = [
                     "BM 1.3k",
                     "Sobe conversão em 24 Hrs"
                 ],
-                originalPrice: 677,
-                price: 643,
+                originalPrice: 643,
+                price: 453,
                 paymentLink: [
                     "https://pay.cakto.com.br/4k65d34",
                     "https://api.whatsapp.com/send?phone=5547991243979&text=Ol%C3%A1%20equipe%20Alpha%20Farm,%20quero%20o%20link%20de%20pagamento%20no%20cart%C3%A3o%20para%20o%20COMBO%20MATILHA!"    
