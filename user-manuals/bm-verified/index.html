@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Farm - Manual de Uso</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .language-flag {
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+        select option {
+            display: flex;
+            align-items: center;
+            padding: 6px 12px;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        alpha: {
+                            primary: '#8443dc',
+                            light: '#f3ebff',
+                            dark: '#5e2fa5'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .content-section {
+            transition: all 0.3s ease;
+        }
+        .language-flag {
+            width: 24px;
+            height: 16px;
+            display: inline-block;
+            margin-right: 8px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 2px;
+        }
+        .pt-flag {
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 720 504'><rect width='720' height='504' fill='%2300933d'/><polygon points='360,72 648,252 360,432 72,252' fill='%23ffdf00'/><circle cx='360' cy='252' r='100' fill='%23003d8f'/><path d='M260,235a100,100 0 0,1 200,0' fill='none' stroke='%23fff' stroke-width='15' transform='rotate(-15 360 252)'/><text x='50%' y='265' font-size='30' text-anchor='middle' fill='%23fff' font-family='sans-serif' transform='rotate(-15 360 252)'>ORDEM E PROGRESSO</text></svg>");
+        }
+        .en-flag {
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 247 130'><rect width='247' height='130' fill='%23b22234'/><g fill='%23fff'><rect width='247' height='10'/><rect y='20' width='247' height='10'/><rect y='40' width='247' height='10'/><rect y='60' width='247' height='10'/><rect y='80' width='247' height='10'/><rect y='100' width='247' height='10'/><rect y='120' width='247' height='10'/></g><rect width='98.8' height='70' fill='%23005284'/><g fill='%23fff'><g id='s'><polygon points='2.5,0 3.1,1.9 5,2 3.5,3.2 4,5 2.5,4 1,5 1.5,3.2 0,2 1.9,1.9'/></g><use href='%23s' x='10' /><use href='%23s' x='20' /><use href='%23s' x='30' /><use href='%23s' x='40' /><use href='%23s' x='50' /><use href='%23s' y='10' x='5'/><use href='%23s' y='10' x='15'/><use href='%23s' y='10' x='25'/><use href='%23s' y='10' x='35'/><use href='%23s' y='10' x='45'/><use href='%23s' y='20' x='0'/><use href='%23s' y='20' x='10'/><use href='%23s' y='20' x='20'/><use href='%23s' y='20' x='30'/><use href='%23s' y='20' x='40'/><use href='%23s' y='30' x='5'/><use href='%23s' y='30' x='15'/><use href='%23s' y='30' x='25'/><use href='%23s' y='30' x='35'/><use href='%23s' y='30' x='45'/><use href='%23s' y='40' x='0'/><use href='%23s' y='40' x='10'/><use href='%23s' y='40' x='20'/><use href='%23s' y='40' x='30'/><use href='%23s' y='40' x='40'/><use href='%23s' y='50' x='5'/><use href='%23s' y='50' x='15'/><use href='%23s' y='50' x='25'/><use href='%23s' y='50' x='35'/><use href='%23s' y='50' x='45'/></g></svg>");
+        }
+        .es-flag {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480"><rect width="800" height="160" y="0" fill="%23aa151b"/><rect width="800" height="160" y="320" fill="%23aa151b"/><rect width="800" height="160" y="160" fill="%23f1bf00"/></svg>');
+        }
+        .animate-bounce-slow {
+            animation: bounce 3s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <div class="container mx-auto px-4 py-8 max-w-5xl">
+        <!-- Header -->
+        <header class="mb-12 text-center">
+            <h1 class="mb-4">
+                <!-- Imagem para tema dark (branca) -->
+                <img src="./logo_positivo.png" alt="Alpha Farm Logo" class="h-16 md:h-20 mx-auto dark:block hidden">
+                <!-- Imagem para tema light (preta) -->
+                <img src="./logo_negativo.png" alt="Alpha Farm Logo" class="h-16 md:h-20 mx-auto block dark:hidden">
+            </h1>
+            <div class="flex justify-center items-center space-x-4 mb-6">
+                <button id="theme-toggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:inline"></i>
+                </button>
+                <div class="relative">
+                    <select id="language-selector" class="appearance-none bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-md py-2 pl-10 pr-8 text-gray-700 dark:text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-alpha-primary">
+                        <option value="pt" class="text-gray-700 dark:text-gray-200">
+                            <span class="language-flag pt-flag mr-2"></span> Português
+                        </option>
+                        <option value="en" class="text-gray-700 dark:text-gray-200">
+                            <span class="language-flag en-flag mr-2"></span> English
+                        </option>
+                        <option value="es" class="text-gray-700 dark:text-gray-200">
+                            <span class="language-flag es-flag mr-2"></span> Español
+                        </option>
+                    </select>
+                    <span class="absolute left-3 top-2 pointer-events-none">
+                        <span id="current-flag" class="language-flag pt-flag"></span>
+                    </span>
+                    <span class="absolute right-3 top-3 pointer-events-none">
+                        <i class="fas fa-chevron-down text-xs text-gray-500"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute inset-0 flex items-center">
+                    <div class="w-full border-t border-gray-300 dark:border-gray-700"></div>
+                </div>
+                <div class="relative flex justify-center">
+                    <span class="px-4 bg-gray-50 dark:bg-gray-900 text-xl text-alpha-primary font-bold">
+                        <span class="hidden" data-lang="pt">MANUAL DE CONTINGÊNCIA</span>
+                        <span class="hidden" data-lang="en">CONTINGENCY MANUAL</span>
+                        <span class="hidden" data-lang="es">MANUAL DE CONTINGENCIA</span>
+                    </span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Warning Section -->
+        <section class="content-section mb-12 bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 text-red-800 dark:text-red-200 p-6 rounded-r-lg">
+            <div class="flex items-start">
+                <div class="flex-shrink-0 pt-1 pr-3">
+                    <i class="fas fa-exclamation-triangle text-2xl"></i>
+                </div>
+                <div>
+                    <h2 class="text-xl font-bold mb-2">
+                        <span class="hidden" data-lang="pt">📢 ATENÇÃO: LEIA ESSE MANUAL ANTES DE USAR QUALQUER ATIVO!</span>
+                        <span class="hidden" data-lang="en">📢 ATTENTION: READ THIS MANUAL BEFORE USING ANY ASSET!</span>
+                        <span class="hidden" data-lang="es">📢 ATENCIÓN: ¡LEA ESTE MANUAL ANTES DE USAR CUALQUIER ACTIVO!</span>
+                    </h2>
+                    <p class="mb-2">
+                        <span class="hidden" data-lang="pt">Esse é um manual rápido e obrigatório. Se você ignorar isso, e depois der algum problema, a responsabilidade será sua.</span>
+                        <span class="hidden" data-lang="en">This is a quick and mandatory manual. If you ignore this and then have any problems, the responsibility will be yours.</span>
+                        <span class="hidden" data-lang="es">Este es un manual rápido y obligatorio. Si ignoras esto y luego tienes algún problema, la responsabilidad será tuya.</span>
+                    </p>
+                    <p class="font-bold">
+                        <span class="hidden" data-lang="pt">Nós entregamos tudo testado e funcionando. Agora é com você ⚠️</span>
+                        <span class="hidden" data-lang="en">We deliver everything tested and working. Now it's up to you ⚠️</span>
+                        <span class="hidden" data-lang="es">Entregamos todo probado y funcionando. Ahora depende de ti ⚠️</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- BM Verified Rules -->
+        <section class="content-section mb-12">
+            <div class="flex items-center mb-6">
+                <div class="mr-3 p-2 rounded-full bg-alpha-primary text-white">
+                    <i class="fas fa-ban"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-gray-200">
+                    <span class="hidden" data-lang="pt">BMs Verificadas – Regras e Avisos Importantes</span>
+                    <span class="hidden" data-lang="en">Verified BMs – Important Rules and Warnings</span>
+                    <span class="hidden" data-lang="es">BMs Verificadas – Reglas y Advertencias Importantes</span>
+                    <span class="ml-2"></span>
+                </h2>
+            </div>
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-4 border border-gray-200 dark:border-gray-700">
+                <p class="mb-4 text-gray-700 dark:text-gray-300">
+                    <span class="hidden" data-lang="pt">A garantia cobre SOMENTE se a BM estiver bloqueada no primeiro login, desde que:</span>
+                    <span class="hidden" data-lang="en">The warranty covers ONLY if the BM is blocked on first login, provided that:</span>
+                    <span class="hidden" data-lang="es">La garantía cubre SOLAMENTE si la BM está bloqueada en el primer inicio de sesión, siempre que:</span>
+                </p>
+                <ul class="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+                    <li>
+                        <span class="hidden" data-lang="pt">Esse login aconteça dentro de no máximo 24 horas após a entrega.</span>
+                        <span class="hidden" data-lang="en">This login occurs within a maximum of 24 hours after delivery.</span>
+                        <span class="hidden" data-lang="es">Este inicio de sesión ocurre dentro de un máximo de 24 horas después de la entrega.</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="bg-amber-50 dark:bg-amber-900/20 rounded-lg shadow-md p-6 mb-4 border-l-4 border-amber-500">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 pr-3 pt-1">
+                        <i class="fas fa-exclamation-circle text-amber-500 dark:text-amber-300 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-amber-700 dark:text-amber-300 mb-2 uppercase text-sm">
+                            <span class="hidden" data-lang="pt">Não trocamos BMs se:</span>
+                            <span class="hidden" data-lang="en">We do not replace BMs if:</span>
+                            <span class="hidden" data-lang="es">No reemplazamos BMs si:</span>
+                        </h3>
+                        <p class="text-amber-700 dark:text-amber-300">
+                            <span class="hidden" data-lang="pt">Ao configurar a API oficial do WhatsApp, o NOME da conta do WhatsApp Business for diferente das informações da empresa verificada na BM.</span>
+                            <span class="hidden" data-lang="en">When configuring the official WhatsApp API, the NAME of the WhatsApp Business account is different from the verified company information in the BM.</span>
+                            <span class="hidden" data-lang="es">Al configurar la API oficial de WhatsApp, el NOMBRE de la cuenta de WhatsApp Business es diferente de la información de la empresa verificada en la BM.</span>
+                        </p>
+                        <p class="text-amber-700 dark:text-amber-300 mt-2">
+                            <span class="hidden" data-lang="pt">Isso pode gerar bloqueio por "Atividade que não segue a Política Comercial do WhatsApp Business."</span>
+                            <span class="hidden" data-lang="en">This may result in blocking due to "Activity that does not follow WhatsApp Business Commercial Policy."</span>
+                            <span class="hidden" data-lang="es">Esto puede resultar en bloqueo debido a "Actividad que no sigue la Política Comercial de WhatsApp Business."</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-purple-50 dark:bg-purple-900/20 rounded-lg shadow-md p-6 mb-4 border-l-4 border-alpha-primary">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 pr-3 pt-1">
+                        <i class="fas fa-bomb text-alpha-primary dark:text-purple-300 text-xl animate-bounce-slow"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-alpha-primary dark:text-purple-300 mb-2 uppercase text-sm">
+                            <span class="hidden" data-lang="pt">IMPORTANTE:</span>
+                            <span class="hidden" data-lang="en">IMPORTANT:</span>
+                            <span class="hidden" data-lang="es">IMPORTANTE:</span>
+                        </h3>
+                        <p class="text-purple-700 dark:text-purple-300">
+                            <span class="hidden" data-lang="pt">Sempre haverá perdas (bloqueios/restrições) ao criar APIs. O Facebook JAMAIS aprovará 100% dos números. Você precisa estar ciente que haverá prejuízos naturais ao longo do processo.</span>
+                            <span class="hidden" data-lang="en">There will always be losses (blocks/restrictions) when creating APIs. Facebook will NEVER approve 100% of numbers. You need to be aware that there will be natural setbacks throughout the process.</span>
+                            <span class="hidden" data-lang="es">Siempre habrá pérdidas (bloqueos/restricciones) al crear APIs. Facebook NUNCA aprobará el 100% de los números. Debes ser consciente de que habrá contratiempos naturales durante el proceso.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg shadow-md p-6 border-l-4 border-blue-500">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 pr-3 pt-1">
+                        <i class="fas fa-lightbulb text-blue-500 dark:text-blue-300 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-blue-700 dark:text-blue-300 mb-2 uppercase text-sm">
+                            <span class="hidden" data-lang="pt">DICA para aumentar sua taxa de aprovação do WhatsApp Business:</span>
+                            <span class="hidden" data-lang="en">TIP to increase your WhatsApp Business approval rate:</span>
+                            <span class="hidden" data-lang="es">CONSEJO para aumentar tu tasa de aprobación de WhatsApp Business:</span>
+                        </h3>
+                        <p class="text-blue-700 dark:text-blue-300">
+                            <span class="hidden" data-lang="pt">Se o nome da empresa na BM for "Truckpad", então na hora de configurar o nome do número na API, use:</span>
+                            <span class="hidden" data-lang="en">If the company name in the BM is "Truckpad", then when configuring the number name in the API, use:</span>
+                            <span class="hidden" data-lang="es">Si el nombre de la empresa en la BM es "Truckpad", entonces al configurar el nombre del número en la API, use:</span>
+                        </p>
+                        <p class="mt-2 text-blue-700 dark:text-blue-300 font-mono bg-white dark:bg-gray-700 p-2 rounded">
+                            → Truckpad - Bingo02, Truckpad - Suporte01, etc.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Login Tutorials -->
+        <section class="content-section mb-12">
+            <div class="flex items-center mb-6">
+                <div class="mr-3 p-2 rounded-full bg-red-500 text-white">
+                    <i class="fas fa-play"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-gray-200">
+                    <span class="hidden" data-lang="pt">🎥 Tutoriais de Login</span>
+                    <span class="hidden" data-lang="en">🎥 Login Tutorials</span>
+                    <span class="hidden" data-lang="es">🎥 Tutoriales de Inicio de Sesión</span>
+                </h2>
+            </div>
+            <p class="text-gray-700 dark:text-gray-300 mb-4">
+                <span class="hidden" data-lang="pt">Veja os vídeos antes de fazer qualquer coisa!</span>
+                <span class="hidden" data-lang="en">Watch the videos before doing anything!</span>
+                <span class="hidden" data-lang="es">¡Mira los videos antes de hacer cualquier cosa!</span>
+            </p>
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-4 border border-gray-200 dark:border-gray-700">
+                <h3 class="font-bold text-gray-800 dark:text-gray-200 mb-4">
+                    <span class="hidden" data-lang="pt">Business Managers (BM):</span>
+                    <span class="hidden" data-lang="en">Business Managers (BM):</span>
+                    <span class="hidden" data-lang="es">Business Managers (BM):</span>
+                </h3>
+                <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+                    <div class="flex-shrink-0 bg-red-500 text-white rounded-lg w-16 h-16 flex items-center justify-center">
+                        <span class="text-2xl font-bold">1</span>
+                    </div>
+                    <div>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            <span class="hidden" data-lang="pt">Instalando BM e visão geral no Gerenciador:</span>
+                            <span class="hidden" data-lang="en">Installing BM and overview in Manager:</span>
+                            <span class="hidden" data-lang="es">Instalando BM y vista general en el Administrador:</span>
+                            <br>
+                            <embed src="https://www.youtube.com/embed/AWfBsRtaHig" class="w-full h-64 rounded-lg">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support Tutorials -->
+        <section class="content-section mb-12">
+            <div class="flex items-center mb-6">
+                <div class="mr-3 p-2 rounded-full bg-blue-500 text-white">
+                    <i class="fas fa-question-circle"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-gray-200">
+                    <span class="hidden" data-lang="pt">🎥 Tutoriais de Suporte</span>
+                    <span class="hidden" data-lang="en">🎥 Support Tutorials</span>
+                    <span class="hidden" data-lang="es">🎥 Tutoriales de Soporte</span>
+                </h2>
+            </div>
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-4 border border-gray-200 dark:border-gray-700">
+                <div class="space-y-6">
+                    <div id="suporte-tutorial1" class="flex flex-col sm:flex-row sm:items-center gap-4 border-b border-gray-200 dark:border-gray-700 pb-6 last:border-0 last:pb-0">
+                        <div class="flex-shrink-0 bg-blue-500 text-white rounded-lg w-16 h-16 flex items-center justify-center">
+                            <span class="text-2xl font-bold">1</span>
+                        </div>
+                        <div>
+                            <p class="text-gray-700 dark:text-gray-300">
+                                <span class="hidden" data-lang="pt">Como recuperar BMs Restritas:</span>
+                                <span class="hidden" data-lang="en">How to recover Restricted BMs:</span>
+                                <span class="hidden" data-lang="es">Cómo recuperar BMs Restringidas:</span>
+                                <br>
+                                <embed src="https://www.youtube.com/embed/TeoaUQHqRAE" class="w-full h-64 rounded-lg">
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-4 border-b border-gray-200 dark:border-gray-700 pb-6 last:border-0 last:pb-0">
+                        <div class="flex-shrink-0 bg-blue-500 text-white rounded-lg w-16 h-16 flex items-center justify-center">
+                            <span class="text-2xl font-bold">2</span>
+                        </div>
+                        <div>
+                            <p class="text-gray-700 dark:text-gray-300">
+                                <span class="hidden" data-lang="pt">Como convidar perfis para a BM:</span>
+                                <span class="hidden" data-lang="en">How to invite profiles to BM:</span>
+                                <span class="hidden" data-lang="es">Cómo invitar perfiles a la BM:</span>
+                                <br>
+                                <embed src="https://www.youtube.com/embed/IfVSOfUVpwc" class="w-full h-64 rounded-lg">
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-4 border-b border-gray-200 dark:border-gray-700 pb-6 last:border-0 last:pb-0">
+                        <div class="flex-shrink-0 bg-blue-500 text-white rounded-lg w-16 h-16 flex items-center justify-center">
+                            <span class="text-2xl font-bold">3</span>
+                        </div>
+                        <div>
+                            <p class="text-gray-700 dark:text-gray-300">
+                                <span class="hidden" data-lang="pt">Verificar e-mail da BM com domínio Uorak:</span>
+                                <span class="hidden" data-lang="en">Verify BM email with Uorak domain:</span>
+                                <span class="hidden" data-lang="es">Verificar correo de BM con dominio Uorak:</span>
+                                <br>
+                                <embed src="https://www.youtube.com/embed/uOK-D-d0a5g" class="w-full h-64 rounded-lg">
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+                        <div class="flex-shrink-0 bg-blue-500 text-white rounded-lg w-16 h-16 flex items-center justify-center">
+                            <span class="text-2xl font-bold">4</span>
+                        </div>
+                        <div>
+                            <p class="text-gray-700 dark:text-gray-300">
+                                <span class="hidden" data-lang="pt">Alterar e-mail da BM burlando verificação:</span>
+                                <span class="hidden" data-lang="en">Change BM email bypassing verification:</span>
+                                <span class="hidden" data-lang="es">Cambiar correo de BM eludiendo verificación:</span>
+                                <br>
+                                <embed src="https://streamable.com/e/4ay79w" class="w-full h-64 rounded-lg">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Login Instructions -->
+        <section class="content-section mb-12">
+            <div class="flex items-center mb-6">
+                <div class="mr-3 p-2 rounded-full bg-green-500 text-white">
+                    <i class="fas fa-clipboard-check"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-gray-200">
+                    <span class="hidden" data-lang="pt">Instruções de Login</span>
+                    <span class="hidden" data-lang="en">Login Instructions</span>
+                    <span class="hidden" data-lang="es">Instrucciones de Inicio de Sesión</span>
+                </h2>
+            </div>
+            <div class="bg-amber-50 dark:bg-amber-900/20 rounded-lg shadow-md p-6 mb-4 border-l-4 border-amber-500">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 pr-3 pt-1">
+                        <i class="fas fa-exclamation-circle text-amber-500 dark:text-amber-300 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-amber-700 dark:text-amber-300 mb-2">
+                            <span class="hidden" data-lang="pt">Atualização Importante:</span>
+                            <span class="hidden" data-lang="en">Important Update:</span>
+                            <span class="hidden" data-lang="es">Actualización Importante:</span>
+                        </h3>
+                        <p class="text-amber-700 dark:text-amber-300">
+                            <span class="hidden" data-lang="pt">Em 2025, o Facebook está mais restritivo com novas BMs. Se sua BM vier com restrição, siga o <a href="#suporte-tutorial1" class="text-blue-600 dark:text-blue-400 hover:underline font-medium">Tutorial de Suporte Nº1</a> para reativar.</span>
+                            <span class="hidden" data-lang="en">In 2025, Facebook is more restrictive with new BMs. If your BM comes restricted, follow <a href="#suporte-tutorial1" class="text-blue-600 dark:text-blue-400 hover:underline font-medium">Support Tutorial No. 1</a> to reactivate it.</span>
+                            <span class="hidden" data-lang="es">En 2025, Facebook es más restrictivo con nuevas BMs. Si tu BM viene restringida, sigue el <a href="#suporte-tutorial1" class="text-blue-600 dark:text-blue-400 hover:underline font-medium">Tutorial de Soporte Nº1</a> para reactivarla.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
+                <div class="flex items-start mb-4">
+                    <div class="flex-shrink-0 pr-3 pt-1">
+                        <i class="fas fa-lock text-green-500"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-800 dark:text-gray-200 mb-2">
+                            <span class="hidden" data-lang="pt">Boas práticas para evitar dor de cabeça:</span>
+                            <span class="hidden" data-lang="en">Best practices to avoid headaches:</span>
+                            <span class="hidden" data-lang="es">Buenas prácticas para evitar dolores de cabeza:</span>
+                        </h3>
+                    </div>
+                </div>
+                <ul class="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+                    <li>
+                        <span class="hidden" data-lang="pt">Coloque 2 perfis como administradores da BM.</span>
+                        <span class="hidden" data-lang="en">Set 2 profiles as BM administrators.</span>
+                        <span class="hidden" data-lang="es">Asigna 2 perfiles como administradores de la BM.</span>
+                    </li>
+                    <li>
+                        <span class="hidden" data-lang="pt">Não confie apenas no link de convite (crie um link backup).</span>
+                        <span class="hidden" data-lang="en">Do not rely only on the invite link (create a backup link).</span>
+                        <span class="hidden" data-lang="es">No confíes solo en el enlace de invitación (crea un enlace de respaldo).</span>
+                    </li>
+                    <li>
+                        <span class="hidden" data-lang="pt">Prazo para aceitar o convite: 24 horas. Se perder, sem reposição.</span>
+                        <span class="hidden" data-lang="en">Time to accept the invitation: 24 hours. If lost, no replacement.</span>
+                        <span class="hidden" data-lang="es">Tiempo para aceptar la invitación: 24 horas. Si se pierde, no hay reemplazo.</span>
+                    </li>
+                    <li>
+                        <span class="hidden" data-lang="pt">A primeira campanha deve ser de Reconhecimento ou Engajamento.</span>
+                        <span class="hidden" data-lang="en">The first campaign should be Recognition or Engagement.</span>
+                        <span class="hidden" data-lang="es">La primera campaña debe ser de Reconocimiento o Compromiso.</span>
+                    </li>
+                    <li>
+                        <span class="hidden" data-lang="pt">Não duplique campanhas no primeiro dia.</span>
+                        <span class="hidden" data-lang="en">Do not duplicate campaigns on the first day.</span>
+                        <span class="hidden" data-lang="es">No dupliques campañas el primer día.</span>
+                    </li>
+                    <li>
+                        <span class="hidden" data-lang="pt">Não aumente o orçamento de forma abrupta.</span>
+                        <span class="hidden" data-lang="en">Do not increase the budget suddenly.</span>
+                        <span class="hidden" data-lang="es">No aumentes el presupuesto de manera abrupta.</span>
+                    </li>
+                    <li>
+                        <span class="hidden" data-lang="pt">Não altere o nome das BMs.</span>
+                        <span class="hidden" data-lang="en">Do not change BM names.</span>
+                        <span class="hidden" data-lang="es">No cambies los nombres de las BMs.</span>
+                    </li>
+                </ul>
+                <div class="mt-4 bg-red-50 dark:bg-red-900/20 rounded p-4 border-l-4 border-red-500">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 pr-3 pt-1">
+                            <i class="fas fa-bullhorn text-red-500 dark:text-red-300"></i>
+                        </div>
+                        <div>
+                            <p class="text-red-700 dark:text-red-300 font-bold">
+                                <span class="hidden" data-lang="pt">O Facebook muda o tempo todo. O que funcionava ontem, pode não funcionar mais.</span>
+                                <span class="hidden" data-lang="en">Facebook changes all the time. What worked yesterday may not work anymore.</span>
+                                <span class="hidden" data-lang="es">Facebook cambia todo el tiempo. Lo que funcionaba ayer puede que ya no funcione.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- No Refund Cases -->
+        <section class="content-section mb-12">
+            <div class="flex items-center mb-6">
+                <div class="mr-3 p-2 rounded-full bg-red-600 text-white">
+                    <i class="fas fa-times"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-gray-200">
+                    <span class="hidden" data-lang="pt">Não há troca ou reembolso em casos de:</span>
+                    <span class="hidden" data-lang="en">No exchange or refund in cases of:</span>
+                    <span class="hidden" data-lang="es">No hay intercambio o reembolso en casos de:</span>
+                </h2>
+            </div>
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
+                <ol class="list-decimal pl-5 space-y-3 text-gray-700 dark:text-gray-300">
+                    <li>
+                        <span class="hidden" data-lang="pt">BM recebeu cartão ou outro método de pagamento</span>
+                        <span class="hidden" data-lang="en">BM received a card or other payment method</span>
+                        <span class="hidden" data-lang="es">BM recibió tarjeta u otro método de pago</span>
+                    </li>
+                    <li>
+                        <span class="hidden" data-lang="pt">BM recebeu ou criou conta de anúncio</span>
+                        <span class="hidden" data-lang="en">BM received or created an ad account</span>
+                        <span class="hidden" data-lang="es">BM recibió o creó cuenta de anuncios</span>
+                    </li>
+                    <li>
+                        <span class="hidden" data-lang="pt">BM verificada com e-mail temporário</span>
+                        <span class="hidden" data-lang="en">BM verified with temporary email</span>
+                        <span class="hidden" data-lang="es">BM verificada con correo temporal</span>
+                    </li>
+                    <li>
+                        <span class="hidden" data-lang="pt">BM teve limite de gastos reduzido</span>
+                        <span class="hidden" data-lang="en">BM had spending limit reduced</span>
+                        <span class="hidden" data-lang="es">BM tuvo límite de gastos reducido</span>
+                    </li>
+                    <li>
+                        <span class="hidden" data-lang="pt">BM sem gastos ativos</span>
+                        <span class="hidden" data-lang="en">BM with no active spending</span>
+                        <span class="hidden" data-lang="es">BM sin gastos activos</span>
+                    </li>
+                    <li>
+                        <span class="hidden" data-lang="pt">Problemas com Pixel ou sem compartilhamento</span>
+                        <span class="hidden" data-lang="en">Problems with Pixel or without sharing</span>
+                        <span class="hidden" data-lang="es">Problemas con Pixel o sin compartir</span>
+                    </li>
+                    <li>
+                        <span class="hidden" data-lang="pt">BM com retenção de fundos (aguarde a liberação pela Meta)</span>
+                        <span class="hidden" data-lang="en">BM with fund retention (wait for release by Meta)</span>
+                        <span class="hidden" data-lang="es">BM con retención de fondos (espere liberación por Meta)</span>
+                    </li>
+                    <li>
+                        <span class="hidden" data-lang="pt">Número de WhatsApp adicionado à BM</span>
+                        <span class="hidden" data-lang="en">WhatsApp number added to BM</span>
+                        <span class="hidden" data-lang="es">Número de WhatsApp añadido a BM</span>
+                    </li>
+                    <li>
+                        <span class="hidden" data-lang="pt">BM enviada para análise</span>
+                        <span class="hidden" data-lang="en">BM sent for analysis</span>
+                        <span class="hidden" data-lang="es">BM enviada para análisis</span>
+                    </li>
+                    <li>
+                        <span class="hidden" data-lang="pt">Quando você remove nossos administradores da BM = GARANTIA ENCERRADA</span>
+                        <span class="hidden" data-lang="en">When you remove our administrators from the BM = WARRANTY TERMINATED</span>
+                        <span class="hidden" data-lang="es">Cuando eliminas nuestros administradores de la BM = GARANTÍA TERMINADA</span>
+                    </li>
+                    <li>
+                        <span class="hidden" data-lang="pt">BM não instalada dentro de 24 horas → sofreu bloqueios mesmo inativa = sem garantia</span>
+                        <span class="hidden" data-lang="en">BM not installed within 24 hours → suffered blocks even inactive = no warranty</span>
+                        <span class="hidden" data-lang="es">BM no instalada en 24 horas → sufrió bloqueos incluso inactiva = sin garantía</span>
+                    </li>
+                </ol>
+            </div>
+        </section>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="http://api.whatsapp.com/send?phone=5547991243979&text=Ol%C3%A1%20equipe%20Alpha%20Farm,%20estou%20no%20manual%20e%20tenho%20uma%20d%C3%BAvida" target="_blank" class="bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg transition-all duration-300 transform hover:scale-110">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-gray-800 py-12">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <!-- Add your footer logo image URL here -->
+                    <img src="./logo_positivo.png" alt="Alpha Farm" class="h-12 dark:block hidden">
+                    <img src="./logo_negativo.png" alt="Alpha Farm" class="h-12 block dark:hidden">
+                </div>
+                <div class="flex space-x-6 mb-6 md:mb-0">
+                    <a href="https://facebook.com/alphafarm.pro" class="text-gray-700 dark:text-gray-300 hover:text-alpha-primary dark:hover:text-alpha-primary transition-colors">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="https://instagram.com/alphafarm.pro" class="text-gray-700 dark:text-gray-300 hover:text-alpha-primary dark:hover:text-alpha-primary transition-colors">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="https://linkedin.com/alphafarm.pro" class="text-gray-700 dark:text-gray-300 hover:text-alpha-primary dark:hover:text-alpha-primary transition-colors">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                </div>
+                <div class="text-center md:text-right">
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                        &copy; <span id="current-year"></span> Alpha Farm. Todos os direitos reservados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Ano atual + 1
+        document.getElementById('current-year').textContent = new Date().getFullYear() + 1;
+        
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        const logoLight = document.querySelector('img.block');
+        const logoDark = document.querySelector('img.dark\\:block');
+        
+        function updateLogos() {
+            // Atualiza visibilidade dos logos baseado no tema atual
+            if (html.classList.contains('dark')) {
+                logoLight.style.display = 'none';
+                logoDark.style.display = 'block';
+            } else {
+                logoLight.style.display = 'block';
+                logoDark.style.display = 'none';
+            }
+        }
+
+        // Check for saved theme preference or use preferred color scheme
+        if (localStorage.getItem('color-theme') === 'dark' || (!localStorage.getItem('color-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+            localStorage.setItem('color-theme', 'dark');
+        } else {
+            html.classList.remove('dark');
+            localStorage.setItem('color-theme', 'light');
+        }
+
+        themeToggle.addEventListener('click', function() {
+            const currentTheme = localStorage.getItem('color-theme');
+            
+            if (currentTheme === 'dark') {
+                html.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            } else {
+                html.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            }
+            
+            // Atualiza os logos quando o tema mudar
+            updateLogos();
+        });
+
+        // Atualiza os logos no carregamento inicial
+        updateLogos();
+
+        // Language Selector
+        const languageSelector = document.getElementById('language-selector');
+        const currentFlag = document.getElementById('current-flag');
+        const contentSections = document.querySelectorAll('.content-section');
+        
+        function updateContentForLanguage(lang) {
+            // Update flag
+            currentFlag.className = `language-flag ${lang}-flag`;
+            
+            // Show/hide language-specific content
+            document.querySelectorAll('[data-lang]').forEach(element => {
+                if (element.getAttribute('data-lang') === lang) {
+                    element.classList.remove('hidden');
+                } else {
+                    element.classList.add('hidden');
+                }
+            });
+        }
+
+        // Set initial language
+        updateContentForLanguage('pt');
+
+        languageSelector.addEventListener('change', function() {
+            const selectedLang = this.value;
+            updateContentForLanguage(selectedLang);
+        });
+    </script>
+</body>
+</html>
